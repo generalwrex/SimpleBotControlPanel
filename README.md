@@ -1,6 +1,8 @@
 # SimpleBotControlPanel
 A simple control panel to remote access NodeJS Discord Bots
 
+**Currently Looking for collaborators that want to help**
+
 If you want to test it, download the repository, extract into a folder somewhere, and run start_server.bat
 
 Navigate to http://localhost:3000

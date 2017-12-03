@@ -26,4 +26,12 @@ Put the path to your bot into the Bot Folder Path
 
 Click start and your bot **should** run from it, watch the console!
 
+Try to access it from another device on your network ( like a smartphone ) by putting your machine's local ip address in place of localhost (i.e. http://[machineip]:3000 )
+
+To find the machine ip (on windows), type **cmd** into the search bar, type **ipconfig** and hit enter, your machine ip should be the first one marked **Ethernet** next to **Ipv4 Address** then type that into your other device as http://[machineip]:3000 
+
+on linux run **ifconfig** and normally the one marked with **eth0** is your primary connection and your machine ip is next to
+**inet addr**
+
+
 Note: Dont forward the port in your router to access it somewhere outside of your network yet as it currently doesn't have any type of security

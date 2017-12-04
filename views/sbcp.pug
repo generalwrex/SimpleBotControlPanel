@@ -1,0 +1,18 @@
+extends layout
+
+block content  
+  div.clearfix
+    div.pull-left
+      i.fa.fa-lg.fa-pie-chart
+      span Simple Bot Control Panel
+    div.pull-right    
+      strong(style="margin: 0px 10px;") #{user}
+      a(href="/logout") Logout
+  br
+  div.jumbotron
+    h1.text-center Bot Control
+
+    a(href="/start")
+    button() Start Server
+    a(href="/stop")
+    button() Stop Server

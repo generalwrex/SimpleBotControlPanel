@@ -15,13 +15,17 @@
             return;
           }
           $.post("http://localhost:3000/start",{path: path}, function(data){
-            if(data==='done')
+            if(data==='running')
               {
-                alert("Bot Started");
+                alert("Bot Is Running!");
               }
           });
         });
         $("#stop").click(function(){
+
+          alert("This function is disabled for now")
+          return;
+
           path=$("#path").val();
           $.post("http://localhost:3000/stop",{path: path}, function(data){             
             if(data==='done')

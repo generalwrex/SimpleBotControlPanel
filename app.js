@@ -7,12 +7,16 @@ var bodyParser = require('body-parser');
 var session = require('express-session');
 var dotenv = require('dotenv');
 var passport = require('passport')
-var index = require('./routes/index');
-var users = require('./routes/users');
+
 
 dotenv.load();
 
 var app = express();
+
+app.io = require('socket.io')();
+
+var index = require('./routes/index');
+var users = require('./routes/users');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -36,6 +40,8 @@ app.use(passport.session());
 
 
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use('/jquery', express.static(__dirname + '/node_modules/jquery/dist/'));
 
 app.use('/', index);
 app.use('/users', users);

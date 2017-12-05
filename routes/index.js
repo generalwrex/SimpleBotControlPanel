@@ -28,8 +28,9 @@ var env = {
 
 };
 
+
 router.get('/', function(req, res, next) {
-  res.render('index', { env: env, user: req.user});
+  res.render('login', {env: env, user: req.user });
 });
 
 router.get('/login',function(req, res){

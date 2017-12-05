@@ -33,6 +33,8 @@ Navigate to http://localhost:3000/login (or http://[machineip]:3000/login)
 Username: admin
 password: admin
 
+![login](https://i.gyazo.com/ed7f636b55d104008c69fb8fe6c9a72d.png)
+
 
 Logging in connects you to the server via SocketIO, Clicking the Start Bot button currently fires off the event handler testing function
 

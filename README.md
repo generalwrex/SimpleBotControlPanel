@@ -1,9 +1,17 @@
 # SimpleBotControlPanel
-A simple control panel to remote access NodeJS Discord Bots
+A simple control panel to remote access Discord Bot Maker Bots
+
+As this is part of the ever expanding DBM Mods lineup, I'm adding in the DBM Mods patreon if anyone would like to pledge ;)
+
+![DBM](https://c10.patreonusercontent.com/3/eyJ3Ijo0MDB9/patreon-media/user/8699698/ba1ff3c810d74077a1f42b198d7f74b6?token-time=2145916800&amp;token-hash=uFFE1cKyDbPqZiP55WxRRSoibtBApY1n4uv7z_c-Kg0%3D)
+
+https://www.patreon.com/dbmmods
 
 **Currently Looking for collaborators that want to help, check issue [#1](https://github.com/generalwrex/SimpleBotControlPanel/issues/1)**
 
-This uses NodeJS [Express](https://expressjs.com/) to serve and handle the control panels requests.
+ ## this branch does not currently start the bot.
+
+This uses NodeJS [Express](https://expressjs.com/), SocketIO for cross communication, and the Pug view engine
 
 ## Installation
 
@@ -13,18 +21,27 @@ This uses NodeJS [Express](https://expressjs.com/) to serve and handle the contr
   npm install
 ```
 
+## Developing
+This will start the bot nodemon (refreshes the server on file changes)
+
+```bash
+ nodemon app
+```
+
 ## Testing
 
 ```bash
- node server.js
+ node ./bin/www
 ```
 
-Navigate to http://localhost:3000
 
-Put the path to your bot into the Bot Folder Path
+Navigate to http://localhost:3000/login (or http://[machineip]:3000/login)
+Username: admin
+password: admin
 
-![one](https://i.gyazo.com/17d5121ab347547ef007ad8add6b99ee.png)
+![login](https://i.gyazo.com/ed7f636b55d104008c69fb8fe6c9a72d.png)
 
-Click start and your bot **should** run from it, watch the console!
+
+Logging in connects you to the server via SocketIO, Clicking the Start Bot button currently fires off the event handler testing function
 
 Note: Dont forward the port in your router to access it somewhere outside of your network yet as it currently doesn't have any type of security

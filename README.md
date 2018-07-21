@@ -35,3 +35,11 @@ on linux run **ifconfig** and normally the one marked with **eth0** is your prim
 
 
 Note: Dont forward the port in your router to access it somewhere outside of your network yet as it currently doesn't have any type of security
+
+
+## Updated By JoKeR#0001 || 21/07/2018
+
+//Added Background
+//Added Step By Step Intructions
+//Added Upload Bot Files Button
+//Updated Whole Page Appearance 

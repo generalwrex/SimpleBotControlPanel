@@ -1,5 +1,150 @@
 <!DOCTYPE html>
 
+<style>
+    @import url("https://fonts.googleapis.com/css?family=Aclonica");
+  body {
+    color: lightpink;
+    background-image: url("https://i.imgur.com/eS4IxK3.png") !important;
+    background-attachment: fixed !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    height: auto !important;
+  	width: auto !important;
+    font-family: Aclonica;
+  }
+
+  banner {
+    border-radius: 2px limegreen;
+  }
+
+  input#path {
+    padding: 0;
+    border-radius: 5px;
+    border-color: solid limegreen;
+    background-color: grey;
+    font-size: 15px;
+  }
+
+  input#start {
+    color: orange;
+    background-color: blueviolet; 
+    border-radius: 4px;
+    border: 2px red;
+    font-size: 20px;
+  
+  }
+
+   input#start:hover {
+    color: blueviolet;
+    background-color: orange;
+    border-radius: 4px;
+    border: 2px blue;
+    font-size: 20px;
+  
+  }
+
+  input#stop {
+    color: orange;
+    background-color: blueviolet; 
+    border-radius: 4px;
+    border: 2px red;
+    font-size: 20px;
+  }
+
+
+  input#stop:hover {
+    color: blueviolet;
+    background-color: orange;
+    border-radius: 4px;
+    border: 2px blue;
+    font-size: 20px;
+  
+  }
+
+  input#upload {
+    color: orange;
+    background-color: blueviolet; 
+    border-radius: 4px;
+    border: 2px red;
+    font-size: 20px;
+  
+  }
+
+  input#upload:hover {
+    color: blueviolet;
+    background-color: orange;
+    border-radius: 4px;
+    border: 2px blue;
+    font-size: 20px;
+  
+  }
+
+  h1 {
+    color: white;
+  }
+
+  h2 {
+    color: white;
+  }
+
+  h3 {
+    color: white;
+    font-size: 25px;
+  }
+
+  h4 {
+    color: white;
+    font-size: 25px;
+  }
+
+  h5 {
+    color: white;
+    font-size: 25px;
+  }
+
+  h6 {
+    color: white;
+    font-size: 25px;
+  }
+
+  div {
+    color: white;
+    background-color: transparent;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 4px;
+    border-color: green;
+  }
+
+  div:hover{
+    color: white;
+    background-color: transparent;
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 4px;
+    border-color: orange;
+  
+  }
+
+  footer {
+    color: white;
+    background-color: transparent;
+  }
+
+  p#step1 {
+    color: orange;
+  }
+
+  p#step2 {
+    color: orange;
+  }
+ 
+  p#step3 {
+    color: orange;
+  }
+
+</style>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
@@ -34,11 +179,37 @@
     </script> 
 </head>
 <body>
+  <center>
+    <h1>Basic Discord Bot Dashboard</h1>
         <br>
         Bot Folder Path: <input id="path" type="text"><br><br>
         <input type="button" id="start" value="Start">
         <input type="button" id="stop" value="Stop">
-        <label for=""></label>
+        <input type="button" id="upload" value="Upload">
+        <label for=""></label><br><br><br>
+      
+    <h2>Getting Started</h2>
+    <div>
+      <h3>Step 1:</h3>
+      <p id="step1">Insert your bot path, Is started with C:\Users\Administrator\Desktop\YourBotNameHere</p><br>
+      <h4>Step 2:</h4>
+      <p id='step2'>In order to start and stop your bot, Your will need to upload your bot to our VPS.<br>
+      Click Upload and select your bot</p><br>
+      <h5>Step 3</h5>
+      <p id='step3'>Once your bot has uploaded you are Done.<br>
+      You are now able to Restart and Update your bot.</p>
+
+      <h6>Enjoy</h6>
+    </div>  
+    </center>
 </body>
+<center>
+  <footer>
+    <br><br>
+<h7>
+  Copyright 2016 - 2018 || JoKeR#0001 & General Wrex#0101 || MythBot
+</h7>
+  </footer>
+</center>
 </html>
    

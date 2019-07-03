@@ -1,2 +1,2 @@
 @echo off
-node botcp.js
+nodemon cp.js

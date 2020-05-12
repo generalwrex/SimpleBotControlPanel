@@ -1,9 +1,9 @@
 // BotCP by General Wrex
 // edited by trq
-var forever = require('forever-monitor')
-var express = require("express")
-var bodyParser = require("body-parser")
-var app = express()
+const forever = require('forever-monitor')
+const express = require("express")
+const bodyParser = require("body-parser")
+const app = express()
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({
@@ -16,8 +16,8 @@ app.get('/', function(req, res) {
   })
 })
 
-var child = null
-var isRunning = false
+const child = null
+const isRunning = false
 let bPath
 let bStart
 
@@ -25,7 +25,7 @@ app.post('/start', function(req, res) {
   bPath = req.body.path
   bStart = req.body.startup
 
-  if (!child && bPath) {
+  if (!child && bPath && bStart) {
     child = new(forever.Monitor)(bStart, {
 
       max: 3,
@@ -66,6 +66,6 @@ app.post('/stop', function(req, res) {
   res.send('done')
 })
 
-var server = app.listen(3000, function() {
+const server = app.listen(3000, function() {
   console.log("Listening on port %s...", server.address().port)
 })

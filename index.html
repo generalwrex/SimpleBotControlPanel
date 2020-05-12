@@ -1,44 +1,55 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <meta charset="utf-8" />
-    <title>DBM Bot Control Panel</title>
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script>
-      $(document).ready(function(){
-        $("#start").click(function(){
-          var path=$("#path").val();
 
-          if(!path){
-            alert("Path is wrong, or is not set!:" + path);
-            return;
+<head>
+  <meta charset="utf-8" />
+  <title>DBM Bot Control Panel</title>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $("#start").click(function() {
+        var path = $("#path").val();
+        var startup = $("#startup").val();
+
+        if (!path) {
+          alert("Path is wrong, or is not set!:" + path);
+          return;
+        }
+        if (!startup) {
+          alert("Startup file is wrong, or is not set!:" + startup);
+          return;
+        }
+        $.post("http://localhost:3000/start", {
+          path: path,
+          startup: startup
+        }, function(data) {
+          if (data === 'done') {
+            alert("Bot Started");
           }
-          $.post("http://localhost:3000/start",{path: path}, function(data){
-            if(data==='done')
-              {
-                alert("Bot Started");
-              }
-          });
-        });
-        $("#stop").click(function(){
-          path=$("#path").val();
-          $.post("http://localhost:3000/stop",{path: path}, function(data){             
-            if(data==='done')
-              {
-                alert("Bot Stopped");
-              }
-          });
         });
       });
-    </script> 
+      $("#stop").click(function() {
+        path = $("#path").val();
+        $.post("http://localhost:3000/stop", {
+          path: path
+        }, function(data) {
+          if (data === 'done') {
+            alert("Bot Stopped");
+          }
+        });
+      });
+    });
+  </script>
 </head>
+
 <body>
-        <br>
-        Bot Folder Path: <input id="path" type="text"><br><br>
-        <input type="button" id="start" value="Start">
-        <input type="button" id="stop" value="Stop">
-        <label for=""></label>
+  <br>
+  Bot Folder Path: <input id="path" type="text"><br><br>
+  Start File: <input id="startup" type="text"><br><br>
+  <input type="button" id="start" value="Start">
+  <input type="button" id="stop" value="Stop">
+  <label for=""></label>
 </body>
+
 </html>
-   
